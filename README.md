@@ -24,3 +24,6 @@ Before running this project, ensure that you have the following installed:
 
 Clone this repository:
 git clone https://github.com/hafsabajwa/spaceMaker.git
+
+```bash
+git clone https://github.com/your-repo/polygon-operations-app.git

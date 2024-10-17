@@ -2,10 +2,7 @@ import React from 'react';
 import * as turf from '@turf/turf';
 
 const RightPanel = ({ selectedPolygons }) => {
-  // Calculate the total area of selected polygons
-  const totalArea = selectedPolygons.reduce((acc, polygon) => {
-    return acc + turf.area(polygon);
-  }, 0);
+  const totalArea = selectedPolygons.reduce((acc, polygon) => acc + turf.area(polygon), 0);
 
   return (
     <div>

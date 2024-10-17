@@ -15,29 +15,29 @@ function LeftPanel({ solutions, setSelectedSolutionIndex, handleUnion, handleInt
           </li>
         ))}
       </ul>
-      <div style={{display:'flex', gap:'5px'}}>
-      <button
-        onClick={handleUnion}
-        disabled={selectedPolygons.length !== 2}
-        title={
-          selectedPolygons.length === 2
-            ? 'Click to merge the selected polygons'
-            : 'Select exactly two polygons to perform union'
-        }
-      >
-        Union
-      </button>
-      <button
-        onClick={handleIntersect}
-        disabled={selectedPolygons.length !== 2}
-        title={
-          selectedPolygons.length === 2
-            ? 'Click to intersect the selected polygons'
-            : 'Select exactly two polygons to perform intersection'
-        }
-      >
-        Intersect
-      </button>
+      <div style={{ display: 'flex', gap: '5px' }}>
+        <button
+          onClick={handleUnion}
+          disabled={selectedPolygons.length !== 2}
+          title={
+            selectedPolygons.length === 2
+              ? 'Click to merge the selected polygons'
+              : 'Select exactly two polygons to perform union'
+          }
+        >
+          Union
+        </button>
+        <button
+          onClick={handleIntersect}
+          disabled={selectedPolygons.length !== 2}
+          title={
+            selectedPolygons.length === 2
+              ? 'Click to intersect the selected polygons'
+              : 'Select exactly two polygons to perform intersection'
+          }
+        >
+          Intersect
+        </button>
       </div>
       <h3>Total Area: {calculateTotalArea()} m²</h3>
     </div>

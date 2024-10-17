@@ -26,5 +26,6 @@ Clone this repository:
 
 ```bash
 git clone https://github.com/hafsabajwa/spaceMaker.git
+```
 
-
+Navigate to the project directory:

@@ -1,15 +1,47 @@
 import React from 'react';
 
-const LeftPanel = ({ setGeoJsonData, geoJsonData1, geoJsonData2 }) => {
+function LeftPanel({ solutions, setSelectedSolutionIndex, handleUnion, handleIntersect, selectedPolygons, calculateTotalArea }) {
   return (
-    <div className="left-panel">
+    <div className="sidebar">
       <h2>Proposed Solutions</h2>
-      {/* Button to load Solution 1 */}
-      <button onClick={() => setGeoJsonData(geoJsonData1)}>Solution 1</button>
-      {/* Button to load Solution 2 */}
-      <button onClick={() => setGeoJsonData(geoJsonData2)}>Solution 2</button>
+      <ul>
+        {solutions.map((_, index) => (
+          <li
+            key={index}
+            onClick={() => setSelectedSolutionIndex(index)}
+            title={`Select solution ${index + 1}`}
+          >
+            Solution {index + 1}
+          </li>
+        ))}
+      </ul>
+      <div style={{display:'flex', gap:'5px'}}>
+      <button
+        onClick={handleUnion}
+        disabled={selectedPolygons.length !== 2}
+        title={
+          selectedPolygons.length === 2
+            ? 'Click to merge the selected polygons'
+            : 'Select exactly two polygons to perform union'
+        }
+      >
+        Union
+      </button>
+      <button
+        onClick={handleIntersect}
+        disabled={selectedPolygons.length !== 2}
+        title={
+          selectedPolygons.length === 2
+            ? 'Click to intersect the selected polygons'
+            : 'Select exactly two polygons to perform intersection'
+        }
+      >
+        Intersect
+      </button>
+      </div>
+      <h3>Total Area: {calculateTotalArea()} m²</h3>
     </div>
   );
-};
+}
 
 export default LeftPanel;

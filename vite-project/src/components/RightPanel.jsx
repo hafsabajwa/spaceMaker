@@ -8,7 +8,7 @@ const RightPanel = ({ selectedPolygons }) => {
   }, 0);
 
   return (
-    <div className="right-panel">
+    <div>
       <h2>Area Statistics</h2>
       {selectedPolygons.length > 0 ? (
         <p>Total selected area: {totalArea.toFixed(2)} m²</p>

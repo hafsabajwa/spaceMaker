@@ -1,13 +1,17 @@
 /* App.css */
-.app-container {
+.app{
   display: flex;
-  height: 100vh;
+  height: 100mvh;
+  border: 1px solid #030101;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
 }
 
 .left-panel {
-  width: 20%;
   padding: 20px;
   background-color: #f0f0f0;
+
 }
 
 .map-view {

@@ -1,0 +1,30 @@
+/* App.css */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 20%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.map-view {
+  padding: 20px;
+  width: 60rem;
+}
+
+.right-panel {
+  width: 20%;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.operation-buttons {
+  margin-top: 10px;
+}
+
+.operation-buttons button {
+  margin-right: 10px;
+}

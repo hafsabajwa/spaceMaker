@@ -1,5 +1,5 @@
 /* App.css */
-.app{
+.app {
   display: flex;
   height: 100mvh;
   border: 1px solid #030101;
@@ -11,7 +11,6 @@
 .left-panel {
   padding: 20px;
   background-color: #f0f0f0;
-
 }
 
 .map-view {
@@ -23,12 +22,4 @@
   width: 20%;
   padding: 20px;
   background-color: #f9f9f9;
-}
-
-.operation-buttons {
-  margin-top: 10px;
-}
-
-.operation-buttons button {
-  margin-right: 10px;
 }
